@@ -15,7 +15,7 @@ class CardFace(models.Model):
     loyality = models.CharField(max_length=10, blank=True)
 
 class Card(models.Model):
-    card_faces = ArrayField(models.ForeignKey(CardFace, on_delete=models.CASCADE), blank=True, default=list)
+    card_faces = models.ManyToManyField(CardFace, related_name='cards')
     name = models.CharField(max_length=100)
     release_date = models.DateField(blank=True, null=True)
     image_uri = models.URLField(blank=True)
