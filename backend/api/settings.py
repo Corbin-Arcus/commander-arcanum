@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #local apps
     'decks.apps.DecksConfig',
     'cards.apps.CardsConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
