@@ -25,7 +25,7 @@ class Card(models.Model):
     oracle_text = models.TextField(blank=True)
     power = models.CharField(max_length=10, blank=True)
     toughness = models.CharField(max_length=10, blank=True)
-    loyality = models.CharField(max_length=10, blank=True)
+    loyalty = models.CharField(max_length=10, blank=True)
     colors = ArrayField(models.CharField(max_length=1), blank=True, default=list)
     color_identity = ArrayField(models.CharField(max_length=1), blank=True, default=list)
     keywords = ArrayField(models.CharField(max_length=50), blank=True, default=list)
